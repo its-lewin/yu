@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-2 lg:hidden my-4">
-    <NuxtLink to="/" class="ml-4"> Yu Chen Hsu </NuxtLink>
+    <NuxtLink to="/" class="ml-4 mt-1"> Yu Chen Hsu </NuxtLink>
     <UDropdown
       :items="items"
       :popper="{ placement: 'bottom-start' }"
