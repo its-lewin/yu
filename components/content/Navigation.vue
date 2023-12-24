@@ -1,9 +1,10 @@
 <template>
-  <div class="lg:hidden my-4">
+  <div class="grid grid-cols-2 lg:hidden my-4">
+    <NuxtLink to="/" class="ml-4"> Yu Chen Hsu </NuxtLink>
     <UDropdown
       :items="items"
       :popper="{ placement: 'bottom-start' }"
-      class="float-right mr-4"
+      class="mr-4 justify-self-end"
     >
       <UButton
         color="white"
@@ -13,11 +14,11 @@
     </UDropdown>
   </div>
 
-  <div class="grid grid-cols-6 gap-6">
+  <div class="lg:grid lg:grid-cols-6 gap-6">
     <div class="hidden lg:inline-block mt-72 ml-4">
       <UVerticalNavigation :links="links" :ui="ui" />
     </div>
-    <div class="col-span-6 lg:col-span-5">
+    <div class="lg:col-span-5">
       <slot />
     </div>
   </div>
