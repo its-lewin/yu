@@ -1,9 +1,23 @@
 <template>
+  <div class="lg:hidden my-4">
+    <UDropdown
+      :items="items"
+      :popper="{ placement: 'bottom-start' }"
+      class="float-right mr-4"
+    >
+      <UButton
+        color="white"
+        label="Menu"
+        trailing-icon="i-heroicons-chevron-down-20-solid"
+      />
+    </UDropdown>
+  </div>
+
   <div class="grid grid-cols-6 gap-6">
-    <div class="mt-72 ml-4">
+    <div class="hidden lg:inline-block mt-72 ml-4">
       <UVerticalNavigation :links="links" :ui="ui" />
     </div>
-    <div class="col-span-5">
+    <div class="col-span-6 lg:col-span-5">
       <slot />
     </div>
   </div>
@@ -25,21 +39,27 @@ const links = [
   },
   {
     label: "© " + new Date().getFullYear().toString(),
-    class:
-      "cursor-default text-xs mt-8 hover:before:bg-transparent text-gray-900 hover:text-gray-900 dark:hover:text-gray-400 dark:hover:before:bg-transparent",
+    class: "pointer-events-none text-xs mt-8",
   },
   {
-    label: "",
+    label: "Instagram",
     avatar: {
       src: "/logos/instagram.svg",
       ui: {
         rounded: "rounded-sm",
       },
+      class: "dark:filter dark:invert",
     },
     to: "https://www.instagram.com/yuchen_o/",
     target: "_blank",
+    labelClass: "opacity-100",
     class:
-      "opacity-60 hover:opacity-100 hover:before:bg-transparent dark:filter dark:invert dark:hover:before:bg-transparent",
+      "opacity-80 hover:opacity-100 text-xs hover:before:bg-transparent dark:hover:before:bg-transparent",
   },
 ];
+
+const items = [];
+items.push([links[0]]);
+items.push([links[1]]);
+items.push([links[3]]);
 </script>
