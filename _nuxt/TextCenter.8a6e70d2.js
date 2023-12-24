@@ -1,0 +1,1 @@
+import{k as t,b as o,c,e,H as a}from"./entry.7c0273eb.js";const l={},n={class:"w-3/4 my-10 mx-auto lg:w-1/3 lg:mt-24"},r=e("h1",{class:"text-2xl font-bold mb-8"},"About",-1),d=e("hr",{class:"mb-8"},null,-1),_={class:"text-md leading-loose space-y-6"};function i(s,m){return o(),c("div",n,[r,d,e("div",_,[a(s.$slots,"default")])])}const h=t(l,[["render",i]]);export{h as default};
