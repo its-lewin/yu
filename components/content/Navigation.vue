@@ -6,11 +6,7 @@
       :popper="{ placement: 'bottom-start' }"
       class="mr-4 justify-self-end"
     >
-      <UButton
-        color="white"
-        label="Menu"
-        trailing-icon="i-heroicons-chevron-down-20-solid"
-      />
+      <UButton color="white" trailing-icon="i-heroicons-bars-3-20-solid" />
     </UDropdown>
   </div>
 
